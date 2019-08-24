@@ -17,7 +17,7 @@ class Comments extends Component {
         event.preventDefault();
         this.props.dispatch({
             type: 'ADD_COMMENTS',
-            payload: this.state
+            payload: this.state.comments
         });
         this.props.history.push('/review');
     }

@@ -8,7 +8,7 @@ import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
 import SubmitFeedback from '../SubmitFeedback/SubmitFeedback';
-// import {connect} from 'react-redux';
+
 
 class App extends Component {
   render() {
