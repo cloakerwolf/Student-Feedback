@@ -6,6 +6,10 @@ class Comments extends Component {
         return (
             <>
                 <h1>Comments</h1>
+                <div>
+                    
+                <button className="btn btn-secondary btn-lg checkoutBtn" onClick={() => this.props.history.push('/review')}>Next</button>
+                </div>
             </>
 
 

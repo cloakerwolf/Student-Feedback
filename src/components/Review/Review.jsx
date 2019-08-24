@@ -6,6 +6,7 @@ class Review extends Component {
         return (
             <>
                 <h1>Review</h1>
+                <button className="btn btn-secondary btn-lg checkoutBtn" onClick={() => this.props.history.push('/submitfeedback')}>Next</button>
             </>
 
 
