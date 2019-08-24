@@ -1,19 +1,39 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
 
 class Content extends Component {
+    state = {
+        understanding: ''
+    }
+
+    handleRadio = (event) => {
+        this.setState({
+            understanding: event.target.value
+        })
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+        this.props.dispatch({
+            type: 'ADD_UNDERSTANDING',
+            payload: this.state.understanding
+        });
+        this.props.history.push('/support');
+
+    }
+
     render() {
         return (
             <>
-                <h1>Content</h1>
-                <div>
-                    <input id="content1" type="radio" name="content" value="1" class="contentInput" />1
-                    <input id="content2" type="radio" name="content" value="2" class="contentInput" />2
-                    <input id="content3" type="radio" name="content" value="3" class="contentInput" />3
-                    <input id="content4" type="radio" name="content" value="4" class="contentInput" />4
-                    <input id="content5" type="radio" name="content" value="5" class="contentInput" />5
-                <button className="btn btn-secondary btn-lg checkoutBtn" onClick={() => this.props.history.push('/support')}>Next</button>
-                </div>
+                <h1>How well are you understanding the content?</h1>
+                <form onSubmit={this.handleSubmit}>
+                    <input className="inputs" type="radio" name="content" value="1" class="contentInput" onChange={this.handleRadio}/>1
+                    <input className="inputs" type="radio" name="content" value="2" class="contentInput" onChange={this.handleRadio}/>2
+                    <input className="inputs" type="radio" name="content" value="3" class="contentInput" onChange={this.handleRadio}/>3
+                    <input className="inputs" type="radio" name="content" value="4" class="contentInput" onChange={this.handleRadio}/>4
+                    <input className="inputs" type="radio" name="content" value="5" class="contentInput" onChange={this.handleRadio}/>5
+                <button className="btn btn-secondary btn-lg checkoutBtn" >Next</button>
+                </form>
             </>
 
 
@@ -25,4 +45,4 @@ class Content extends Component {
 
 
 
-export default Content;
+export default connect()(Content);
