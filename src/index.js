@@ -27,6 +27,8 @@ const inputReducer = (state = feedback, action) => {
             return {...state, support: action.payload};
         case 'ADD_COMMENTS':
             return {...state, comments: action.payload};
+        case 'CLEAR_FEEDBACK':
+            return {};
         default:
             return state;
     }

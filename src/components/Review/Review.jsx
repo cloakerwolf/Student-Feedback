@@ -16,7 +16,7 @@ class Review extends Component {
         Axios.post('/feedback', info)
             .then(response =>{
                 console.log('successful Post request to database', response);
-                // this.props.dispatch({type:'CLEAR_CART'});
+                this.props.dispatch({type:'CLEAR_FEEDBACK'});
                 this.props.history.push('/submitfeedback');
             })
             .catch(err => {
