@@ -15,7 +15,7 @@ class Feeling extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        if (this.state.feeling === '') { }
+        if (this.state.feeling === '') { alert('ENTER A INPUT!') }
         else {
         this.props.dispatch({
             type: 'ADD_FEELING',

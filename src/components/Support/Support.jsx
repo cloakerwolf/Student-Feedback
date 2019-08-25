@@ -14,7 +14,7 @@ class Support extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        if (this.state.support === '') { }
+        if (this.state.support === '') { alert('ENTER A INPUT!')}
         else{
         
         this.props.dispatch({

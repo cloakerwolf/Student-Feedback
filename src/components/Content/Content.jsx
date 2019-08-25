@@ -14,7 +14,7 @@ class Content extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        if (this.state.understanding === '') { }
+        if (this.state.understanding === '') { alert('ENTER A INPUT!') }
         else{
         
         this.props.dispatch({
