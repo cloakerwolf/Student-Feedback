@@ -14,12 +14,15 @@ class Support extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
+        if (this.state.support === '') { }
+        else{
+        
         this.props.dispatch({
             type: 'ADD_SUPPORT',
             payload: this.state.support
         });
         this.props.history.push('/comments');
-
+        }
     }
 
 
@@ -29,11 +32,11 @@ class Support extends Component {
             <>
                 <h1>How well are you being supported?</h1>
                 <form onSubmit={this.handleSubmit}>
-                    <input className="inputs" type="radio" name="support" value="1" class="supportInput" onChange={this.handleRadio}/>1
-                    <input className="inputs" type="radio" name="support" value="2" class="supportInput" onChange={this.handleRadio}/>2
-                    <input className="inputs" type="radio" name="support" value="3" class="supportInput" onChange={this.handleRadio}/>3
-                    <input className="inputs" type="radio" name="support" value="4" class="supportInput" onChange={this.handleRadio}/>4
-                    <input className="inputs" type="radio" name="support" value="5" class="supportInput" onChange={this.handleRadio}/>5
+                    <input className="inputs" type="radio" name="support" value="1"  onChange={this.handleRadio}/>1
+                    <input className="inputs" type="radio" name="support" value="2"  onChange={this.handleRadio}/>2
+                    <input className="inputs" type="radio" name="support" value="3"  onChange={this.handleRadio}/>3
+                    <input className="inputs" type="radio" name="support" value="4"  onChange={this.handleRadio}/>4
+                    <input className="inputs" type="radio" name="support" value="5"  onChange={this.handleRadio}/>5
                 <button className="btn btn-secondary btn-lg checkoutBtn" >Next</button>
                 </form>
             </>

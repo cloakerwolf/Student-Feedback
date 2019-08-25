@@ -14,12 +14,15 @@ class Content extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
+        if (this.state.understanding === '') { }
+        else{
+        
         this.props.dispatch({
             type: 'ADD_UNDERSTANDING',
             payload: this.state.understanding
         });
         this.props.history.push('/support');
-
+        }
     }
 
     render() {
@@ -27,11 +30,11 @@ class Content extends Component {
             <>
                 <h1>How well are you understanding the content?</h1>
                 <form onSubmit={this.handleSubmit}>
-                    <input className="inputs" type="radio" name="content" value="1" class="contentInput" onChange={this.handleRadio}/>1
-                    <input className="inputs" type="radio" name="content" value="2" class="contentInput" onChange={this.handleRadio}/>2
-                    <input className="inputs" type="radio" name="content" value="3" class="contentInput" onChange={this.handleRadio}/>3
-                    <input className="inputs" type="radio" name="content" value="4" class="contentInput" onChange={this.handleRadio}/>4
-                    <input className="inputs" type="radio" name="content" value="5" class="contentInput" onChange={this.handleRadio}/>5
+                    <input className="inputs" type="radio" name="content" value="1"  onChange={this.handleRadio}/>1
+                    <input className="inputs" type="radio" name="content" value="2"  onChange={this.handleRadio}/>2
+                    <input className="inputs" type="radio" name="content" value="3"  onChange={this.handleRadio}/>3
+                    <input className="inputs" type="radio" name="content" value="4"  onChange={this.handleRadio}/>4
+                    <input className="inputs" type="radio" name="content" value="5"  onChange={this.handleRadio}/>5
                 <button className="btn btn-secondary btn-lg checkoutBtn" >Next</button>
                 </form>
             </>
