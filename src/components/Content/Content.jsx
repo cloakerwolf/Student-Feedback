@@ -12,6 +12,11 @@ class Content extends Component {
         })
     }
 
+    handleBack = (event) =>{
+        event.preventDefault();
+        this.props.history.push('/');
+    }
+
     handleSubmit = (event) => {
         event.preventDefault();
         if (this.state.understanding === '') { alert('ENTER A INPUT!') }
@@ -35,8 +40,11 @@ class Content extends Component {
                     <input className="inputs" type="radio" name="content" value="3"  onChange={this.handleRadio}/>3
                     <input className="inputs" type="radio" name="content" value="4"  onChange={this.handleRadio}/>4
                     <input className="inputs" type="radio" name="content" value="5"  onChange={this.handleRadio}/>5
+                <br/>
                 <button className="btn btn-secondary btn-lg checkoutBtn" >Next</button>
                 </form>
+                {/* put the button outside the form so i can still hit return to enter the input or use the next button */}
+                <button className="btn btn-secondary btn-lg checkoutBtn" onClick={this.handleBack}>Back</button>
             </>
 
 

@@ -27,6 +27,11 @@ class Review extends Component {
             
     }
 
+    handleBack = (event) => {
+        event.preventDefault();
+        this.props.history.push('/comments');
+    }
+
 
     render() {
         return (
@@ -38,6 +43,8 @@ class Review extends Component {
                 <h3>Support: {this.props.feedback.support}</h3>
                 <h3>Comments: {this.props.feedback.comments}</h3>
                 <button className="btn btn-secondary btn-lg checkoutBtn" onClick={this.handleSubmit}>Next</button>
+                <br />
+                <button className="btn btn-secondary btn-lg checkoutBtn" onClick={this.handleBack}>Back</button>
             </>
 
 

@@ -22,7 +22,10 @@ class Comments extends Component {
         this.props.history.push('/review');
     }
 
-
+    handleBack = (event) => {
+        event.preventDefault();
+        this.props.history.push('/support');
+    }
 
 
     render() {
@@ -31,8 +34,11 @@ class Comments extends Component {
                 <h1>Any comments you want to leave?</h1>
                 <form onSubmit={this.handleSubmit}>
                     <input className="inputs" type="text" placeholder="Comments" onChange={this.handleChange} />
+                    <br />
                     <button className="btn btn-secondary btn-lg checkoutBtn" >Next</button>
                 </form>
+                {/* put the button outside the form so i can still hit return to enter the input or use the next button */}
+                <button className="btn btn-secondary btn-lg checkoutBtn" onClick={this.handleBack}>Back</button>
             </>
 
 
