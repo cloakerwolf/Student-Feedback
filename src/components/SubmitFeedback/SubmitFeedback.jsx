@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
 
 
 class SubmitFeedback extends Component {
@@ -6,8 +7,8 @@ class SubmitFeedback extends Component {
         return (
             <>
                 <h1>Thank You!</h1>
-                <button className="btn btn-secondary btn-lg checkoutBtn" onClick={() => this.props.history.push('/')}>Leave New Feedback</button>
-                <button className="btn btn-secondary btn-lg checkoutBtn" onClick={() => this.props.history.push('/Admin')}>Admin</button>
+                <Button variant="contained" color="primary" className="btn btn-secondary btn-lg checkoutBtn" onClick={() => this.props.history.push('/')}>Leave New Feedback</Button>
+                <Button variant="contained" color="primary" className="btn btn-secondary btn-lg checkoutBtn" onClick={() => this.props.history.push('/Admin')}>Admin</Button>
             </>
 
 
