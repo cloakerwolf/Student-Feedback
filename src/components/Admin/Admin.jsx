@@ -85,7 +85,7 @@ class Admin extends Component {
                     </Table>
                 </Paper>
 
-                <button className="btn btn-secondary btn-lg checkoutBtn" onClick={() => this.props.history.push('/')}>Leave New Feedback</button>
+                <Button variant="contained" color="primary" className="btn btn-secondary btn-lg checkoutBtn" onClick={() => this.props.history.push('/')}>Leave New Feedback</Button>
                 {/* {JSON.stringify(this.props.feedback)} */}
             </>
 

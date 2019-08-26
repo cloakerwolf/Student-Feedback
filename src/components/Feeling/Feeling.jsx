@@ -7,12 +7,14 @@ class Feeling extends Component {
         feeling: ''
     }
 
+    //store the radio value in state feeling
     handleRadio = (event) => {
         this.setState({
             feeling: event.target.value
         })
     }
 
+    //if handle submit is on the form so i can enter value then hit enter or hit the next button
     handleSubmit = (event) => {
         event.preventDefault();
         if (this.state.feeling === '') { alert('ENTER A INPUT!') }
