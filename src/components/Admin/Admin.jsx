@@ -35,6 +35,19 @@ class Admin extends Component {
     }
 
 
+    handleDelete = (id) => {
+        axios.delete(`/feedback/${id}`)
+        .then(response => {
+            console.log('in delete axios:', response);
+            this.getFeedback();
+        })
+        .catch(error =>{
+            console.log('in delete axios:',error);
+            
+        })
+    }
+
+
 
 
     render() {
@@ -45,7 +58,7 @@ class Admin extends Component {
                     <TableCell>{single.understanding}</TableCell>
                     <TableCell>{single.support}</TableCell>
                     <TableCell>{single.comments}</TableCell>
-                    <TableCell><Button variant="contained" color="secondary">Delete<DeleteIcon /> </Button></TableCell>
+                    <TableCell><Button onClick={() => this.handleDelete(single.id)} variant="contained" color="secondary">Delete<DeleteIcon /> </Button></TableCell>
                 </TableRow>
             )
         })
