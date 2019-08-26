@@ -9,6 +9,8 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 
 
@@ -43,6 +45,7 @@ class Admin extends Component {
                     <TableCell>{single.understanding}</TableCell>
                     <TableCell>{single.support}</TableCell>
                     <TableCell>{single.comments}</TableCell>
+                    <TableCell><Button variant="contained" color="secondary">Delete<DeleteIcon /> </Button></TableCell>
                 </TableRow>
             )
         })
