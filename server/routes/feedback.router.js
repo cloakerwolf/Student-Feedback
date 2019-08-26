@@ -5,7 +5,7 @@ const pool = require('../modules/pool');
 
 // Get all feedback
 router.get('/', (req, res) => {
-    let queryText = 'SELECT * FROM "feedback" ORDER BY "id";';
+    let queryText = 'SELECT * FROM "feedback" ORDER BY "id" DESC;';
     pool.query(queryText).then(result => {
         // Sends back the results in an object
         res.send(result.rows);
