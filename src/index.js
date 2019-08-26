@@ -35,11 +35,21 @@ const inputReducer = (state = feedback, action) => {
 
 }
 
+const GetReducer = (state = [], action) => {
+    switch (action.type) {
+        case 'GET_FEEDBACK':
+            return action.payload;
+        default:
+            return state;
+    }
+}
+
 
 
 const store = createStore(
     combineReducers({
-        inputReducer
+        inputReducer,
+        GetReducer
     }),
     applyMiddleware(logger)
 );
