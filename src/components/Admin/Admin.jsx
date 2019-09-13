@@ -15,11 +15,12 @@ import DeleteIcon from '@material-ui/icons/Delete';
 
 
 class Admin extends Component {
-
+    //When the component is started it makes sure this.getFeedback runs
     componentDidMount() {
         this.getFeedback();
     }
-
+    
+    //GET Data From Database Then send it to the Redux
     getFeedback = () => {
         console.log('in GET FEEDBACK function');
         axios.get('/feedback')
@@ -34,7 +35,7 @@ class Admin extends Component {
             })
     }
 
-
+    //Delete a row from the Database and the Dom
     handleDelete = (id) => {
         axios.delete(`/feedback/${id}`)
         .then(response => {
