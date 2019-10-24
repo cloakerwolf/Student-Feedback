@@ -35,7 +35,7 @@ The parts:
 - How well are you understanding the content?
 ![understanding](screenshots/understanding.png)
 - How well are you being supported?
-![support](screenshots/supported.png)
+![support](screenshots/support.png)
 - Any comments you want to leave?
 ![comments](screenshots/comments.png)
 
