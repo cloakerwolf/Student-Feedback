@@ -4,7 +4,7 @@ This app is designed for the users to share how their day was and store their re
 
 ## Screenshots
 ![Feedback](screenshots/Feedback.png)
-![feedbackHistory](sreenshots/feedbackHistory.png)
+![feedbackHistory](screenshots/feedbackHistory.png)
 
 
 ## SETUP
